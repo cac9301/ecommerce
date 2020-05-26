@@ -5,6 +5,7 @@ import SectionSmall from "./components/SectionSmall";
 import SectionCards from "./components/SectionCards";
 import SectionBaner from "./components/SectionBaner";
 import SectionCarouseOwn from "./components/SectionCarouseOwn/SectionCarouseOwn";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <SectionCards />
       <SectionBaner />
       <SectionCarouseOwn/>
+      <Footer/>
     </>
   );
 }

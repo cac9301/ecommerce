@@ -335,6 +335,94 @@ h5 {
     transition: all .3s ease-in-out;
 }
 
+{
+    /*Footer*/
+}
+
+.footer_dark {
+    background-color: #202325;
+}
+
+.footer_top {
+    padding: 100px 0 70px;
+}
+
+footer .widget {
+    margin-bottom: 30px;
+    color: var(--white);
+    list-style: none;
+}
+
+:hover a {
+    color: var(--white);
+}
+
+ul,
+li,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer .widget_title {
+    color: var(--white);
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 2rem;
+}
+
+.contact_info {
+    line-height: 2rem;
+}
+
+.widget_links a {
+    color: "#fff"
+}
+
+.widget_title {
+    color: "#fff";
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.bottom_footer {
+    color: var(--white);
+}
+
+.social_icons,
+.contact_detail {
+    font-size: 0;
+}
+
+a {
+    color: var(--white);
+}
+
+.newsletter_form .btn-send {
+    background-color: #FF324D;
+    color: #fff;
+    font-size: 20px;
+    right: 5px;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin-top: 1rem;
+    line-height: 40px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .footer_top {
+        padding: 80px 0 50px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .single_bn_title {
         font-size: 20px;

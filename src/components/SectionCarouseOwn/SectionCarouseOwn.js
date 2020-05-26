@@ -7,6 +7,18 @@ import { datos } from "../datos";
 import Cards from "./Card";
 
 const SectionCarouseOwn = () => {
+  const responsive=
+ {
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:3
+      }
+  }
   return (
     <Container>
       <Row
@@ -29,16 +41,15 @@ const SectionCarouseOwn = () => {
           margin={10}
           nav
           items={3}
+          responsive={responsive}
           data-aos="fade-left"
           data-aos-delay="50"
           data-aos-duration="1500"
         >
           {datos.map((producto) => (
-          <Col xs={12}>
-            <div className="item">
-              <Cards producto={producto} />
-            </div>
-            </Col>
+              <div className="item">
+                <Cards producto={producto} />
+              </div>
           ))}
         </OwlCarousel>
       </Col>
