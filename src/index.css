@@ -79,6 +79,13 @@ body {
     text-align: left;
 }
 
+.color {
+    color: #292b2c!important;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
 a {
     color: #000000;
     text-decoration: none;
@@ -192,6 +199,7 @@ a {
     margin-bottom: 15px;
     padding-bottom: 15px;
     position: relative;
+    text-transform: capitalize;
 }
 
 .heading_s3::before {
@@ -335,9 +343,8 @@ h5 {
     transition: all .3s ease-in-out;
 }
 
-{
-    /*Footer*/
-}
+
+/*Footer*/
 
 .footer_dark {
     background-color: #202325;
@@ -415,6 +422,20 @@ a {
     padding: 0;
     margin-top: 1rem;
     line-height: 40px;
+}
+
+.breadcrumb_section {
+    padding: 10px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bg_gray {
+    background-color: #e9ecef !important;
+}
+
+.breadcrumb {
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 1199px) {

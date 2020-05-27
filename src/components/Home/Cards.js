@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 
 const Cards = ({  lg, md, xs }) => {
   AOS.init();
-  const usuario = true;
+  const usuario = false;
   const history = useHistory();
   console.log(datos);
   // cuando el usuario haga submit
