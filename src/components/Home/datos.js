@@ -1,12 +1,12 @@
 
-import img_1 from "../img/furniture_img9.jpg"
-import img_2 from "../img/furniture_img2.jpg"
-import img_3 from "../img/furniture_img3.jpg"
-import img_4 from "../img/furniture_img4.jpg"
-import img_5 from "../img/furniture_img5.jpg"
-import img_6 from "../img/furniture_img6.jpg"
-import img_7 from "../img/furniture_img7.jpg"
-import img_8 from "../img/furniture_img8.jpg"
+import img_1 from "../../img/furniture_img9.jpg"
+import img_2 from "../../img/furniture_img2.jpg"
+import img_3 from "../../img/furniture_img3.jpg"
+import img_4 from "../../img/furniture_img4.jpg"
+import img_5 from "../../img/furniture_img5.jpg"
+import img_6 from "../../img/furniture_img6.jpg"
+import img_7 from "../../img/furniture_img7.jpg"
+import img_8 from "../../img/furniture_img8.jpg"
 
 export const datos =[
         {

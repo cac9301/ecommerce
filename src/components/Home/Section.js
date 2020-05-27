@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Carousel, Container, Row, Col,Button } from "react-bootstrap";
-import img_1 from "../img/Carousel1.jpg";
-import img_2 from "../img/Carousel2.jpg";
-import img_3 from "../img/Carousel3.jpg";
+import img_1 from "../../img/Carousel1.jpg";
+import img_2 from "../../img/Carousel2.jpg";
+import img_3 from "../../img/Carousel3.jpg";
 import AOS from 'aos';
 
 const Section = () => {
@@ -24,7 +24,7 @@ const Section = () => {
           <Carousel.Caption className="caorusel-caption" as="div">
             <Container className="contenedor-corousel">
               <Row >
-                <Col xs={6} md={6} 
+                <Col xs={12} md={6} 
                  className="banner_content2"
                  data-aos="fade-right"
                  data-aos-delay="50"
@@ -49,7 +49,7 @@ const Section = () => {
           <Carousel.Caption className="caorusel-caption" as="div">
             <Container className="contenedor-corousel">
               <Row>
-              <Col xs={6} md={6} data-aos="fade-up"
+              <Col xs={12} md={6} data-aos="fade-up"
                  className="banner_content2"
                  data-aos-delay="50"
                  data-aos-duration="1500">
@@ -74,7 +74,7 @@ const Section = () => {
           <Carousel.Caption className="caorusel-caption" as="div">
             <Container className="contenedor-corousel">
               <Row>
-              <Col xs={6} md={6} data-aos="fade-right"
+              <Col xs={12} md={6} data-aos="fade-right"
                  className="banner_content2"
                  data-aos-delay="50"
                  data-aos-duration="1500">

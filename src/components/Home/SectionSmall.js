@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import img from "../img/truck.svg";
-import img2 from "../img/headphone.svg";
-import img3 from "../img/money-back.svg";
-import img4 from "../img/security.svg";
+import img from "../../img/truck.svg";
+import img2 from "../../img/headphone.svg";
+import img3 from "../../img/money-back.svg";
+import img4 from "../../img/security.svg";
 import AOS from 'aos';
 
 const SectionSmall = () => {

@@ -1,22 +1,21 @@
 import React from "react";
-import Header from "./components/Header";
-import Section from "./components/Section";
-import SectionSmall from "./components/SectionSmall";
-import SectionCards from "./components/SectionCards";
-import SectionBaner from "./components/SectionBaner";
-import SectionCarouseOwn from "./components/SectionCarouseOwn/SectionCarouseOwn";
-import Footer from "./components/Footer";
+import Header from "./components/Home/Header";
+import Home from "./components/Home/Home";
+import Login from "./components/login/Login"
+import Footer from "./components/Home/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
-      <Section />
-      <SectionSmall />
-      <SectionCards />
-      <SectionBaner />
-      <SectionCarouseOwn/>
-      <Footer/>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+        </Switch>
+        <Footer />
+      </Router>
     </>
   );
 }

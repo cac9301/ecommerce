@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import img from "../img/furniture_banner1.jpg";
-import img2 from "../img/furniture_banner2.jpg";
+import img from "../../img/furniture_banner1.jpg";
+import img2 from "../../img/furniture_banner2.jpg";
 import AOS from "aos";
 
 const SectionBaner = () => {

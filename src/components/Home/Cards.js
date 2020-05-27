@@ -4,11 +4,25 @@ import { Icon } from "@iconify/react";
 import basketLoaded from "@iconify/icons-simple-line-icons/basket-loaded";
 import AOS from "aos";
 import { datos } from "./datos";
+import { useHistory } from 'react-router-dom';
 
-const Cards = ({ lg, md, xs }) => {
+const Cards = ({  lg, md, xs }) => {
   AOS.init();
+  const usuario = true;
+  const history = useHistory();
   console.log(datos);
-
+  // cuando el usuario haga submit
+  const comprar = () => {
+    if (usuario) {
+      console.log("comprando");
+    }else{
+      history.push('/login')
+      console.log("se enviara a login");
+      
+    }
+    // redireccionar
+    
+  };
   return (
     <div className="">
       <Row
@@ -17,7 +31,7 @@ const Cards = ({ lg, md, xs }) => {
         data-aos-duration="1500"
         className="shop_container"
       >
-        {datos.map(producto => (
+        {datos.map((producto) => (
           <Col key={producto.id} lg={3} md={3} xs={12} sm={12} className="mb-3">
             <Card border="secondary">
               <Card.Img variant="top" src={producto.img} />
@@ -39,7 +53,7 @@ const Cards = ({ lg, md, xs }) => {
                   </div>
                 </Card.Text>
                 <div className="d-flex justify-content-center">
-                  <Button variant="outline-danger">
+                  <Button onClick={() => comprar()} variant="outline-danger">
                     <Icon className="icon" icon={basketLoaded} />
                     Add To Cart
                   </Button>
