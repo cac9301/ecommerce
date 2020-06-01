@@ -1,27 +1,48 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card, Row, Col, Button } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 import basketLoaded from "@iconify/icons-simple-line-icons/basket-loaded";
+import magnifierAdd from "@iconify/icons-simple-line-icons/magnifier-add";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 import { datos } from "./datos";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import ShopingContext from "../../context/ShopingCart/ShonpingCartContext";
 
-const Cards = ({  lg, md, xs }) => {
+import {ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const Cards = ({ lg, md, xs }) => {
+  const notify = () =>
+    toast(`product add to cart !😌`, {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  // transciciones
+
   AOS.init();
-  const usuario = false;
+  // states
+  const usuario = true;
   const history = useHistory();
-  console.log(datos);
-  // cuando el usuario haga submit
-  const comprar = () => {
+
+  //USEAR EL CONTEXTO
+  const shopingContexts = useContext(ShopingContext);
+  const { addToCart } = shopingContexts;
+
+  // funciones
+  const comprar = (producto) => {
     if (usuario) {
-      console.log("comprando");
-    }else{
-      history.push('/login')
+      addToCart(producto);
+    } else {
+      history.push("/login");
       console.log("se enviara a login");
-      
     }
     // redireccionar
-    
   };
   return (
     <div className="">
@@ -48,14 +69,27 @@ const Cards = ({  lg, md, xs }) => {
                 </Card.Title>
                 <Card.Text>
                   <div className="product_price">
-                    <span className="price">{producto.price}</span>
+                    <span className="price">
+                      ${Number.parseFloat(producto.price).toFixed(2)}
+                    </span>
                     <del>{producto.del}</del>
                   </div>
                 </Card.Text>
                 <div className="d-flex justify-content-center">
-                  <Button onClick={() => comprar()} variant="outline-danger">
+                  <Button
+                    onClick={() => {comprar(producto)
+                      notify()}}
+                    variant="outline-danger"
+                  >
                     <Icon className="icon" icon={basketLoaded} />
-                    Add To Cart
+                    Add
+                    <ToastContainer />
+                  </Button>
+                  <Button className="btn-circle" variant="warning">
+                    {" "}
+                    <Link to={`/productView/${producto.id}`}>
+                      <Icon className="icon" icon={magnifierAdd} />
+                    </Link>
                   </Button>
                 </div>
               </Card.Body>

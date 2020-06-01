@@ -42,7 +42,7 @@ const Section = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="imgCarousel d-block w-100"
+            className="imgCarousel d-block w-100 img-fluid"
             src={img_2}
             alt="Third slide"
           />

@@ -18,7 +18,7 @@ const breadcrumb = ({ Nombre, ruta, postion ,NombreRuta }) => {
                   Home
                 </Link>
               </Breadcrumb.Item>
-              <Breadcrumb.Item>
+              <Breadcrumb.Item active>
                 <Link style={{ color: "#292b2c" }} to={`/${ruta}`}>
                   {NombreRuta}
                 </Link>
